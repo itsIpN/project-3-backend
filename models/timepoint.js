@@ -9,6 +9,7 @@ const Timepoint = mongoose.model(`Timepoints`, new mongoose.Schema({
     developer: String,
     timepoint_number: Number,
     production_date: Date,
+    description: String
 }))
 
 module.exports = Timepoint
