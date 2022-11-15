@@ -28,6 +28,14 @@ router.post(`/`, async (req, res) => {
 })
 
 
+//delete
+router.delete(`/:id`, async (req, res) => {
+    try {
+        res.status(200).json(await Test.findByIdAndDelete(req.params.id))
+    } catch (error) {
+        res.status(400).json({message: `bad request`})
+    }
+})
 
 
 
